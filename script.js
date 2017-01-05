@@ -1,8 +1,10 @@
-// Done monitor user keystrokes
-// Done watch for the backspaces character
-// Done create  counter for backspaces.
-// Done Save current streak high score.
-// Fixed Not resetting counter to 0 for streak-fix
+// *Done monitor user keystrokes
+// *Done watch for the backspaces character
+// *Done create  counter for backspaces.
+// *Done Save current streak high score.
+// *Fixed Not resetting counter to 0 for streak-fix
+
+// Make user text input output to screen
 
 var counterBs = 0;
 var counterNbs = 0;
