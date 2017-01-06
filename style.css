@@ -11,12 +11,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', end
 color: white;
 font-family: "Helvetica Neue", Arial, san serif;
 margin: 0;
+padding: 0;
 }
-header :firstChild {
-
+header  {
+	background: black;
+	width: 100%;
+	min-height: 80px;
 }
 h1 {
 	text-align: center;
-	background: black;
 	margin: 0;
+}
+#text {
+	background: white;
+	color: black;
+	border-radius: 3px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	margin: 15px 15px;
+	min-width: 400px;
+	min-height: 300px;
 }
