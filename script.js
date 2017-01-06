@@ -1,15 +1,11 @@
-// *Done monitor user keystrokes
-// *Done watch for the backspaces character
-// *Done create  counter for backspaces.
-// *Done Save current streak high score.
-// *Fixed Not resetting counter to 0 for streak-fix
-
-// Make user text input output to screen
+// Don't include first key input. Maybe have a 'start button'
+// Keep track of the character entered before backspace or deleted by backspace to detect patterns of error.
 
 var counterBs = 0;
 var counterNbs = 0;
+var text = document.getElementById("text");
 
-window.addEventListener('keyup', (e) => {
+text.addEventListener('keyup', (e) => {
 	const keyName = e.key;
 	if (e.key === 'Backspace') {
 		counterBs += 1;
