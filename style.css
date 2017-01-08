@@ -34,7 +34,7 @@ p {
 	border-radius: 3px;
 	border: 1px solid black;
 	box-sizing: border-box;
-	float: left;
+	/*float: left;*/
 	font-size: 1.25em;
 	margin: 15px 15px;
 	min-width: 400px;
