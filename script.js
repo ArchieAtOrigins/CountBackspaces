@@ -1,12 +1,8 @@
-// Don't include first key input. Maybe have a 'start button'
-// Keep track of the character entered before backspace or deleted by backspace to detect patterns of error.
-// Setup a Reset Button
-	// Clear the text area
-	// 
-
 var counterBs = 0;
 var counterNbs = 0;
 var text = document.getElementById("text");
+var currentScore = counterBs;
+var highScore = 0;
 
 document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
 
@@ -23,10 +19,20 @@ text.addEventListener('keyup', (e) => {
 	}
 })
 
-var reset = document.addEventListener("buttonReset", reset);
+	document.addEventListener('click', reset);
+	function reset() {
+		text = "";
+		document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
+		document.getElementById('noBackspace').innerHTML = "";
+		document.getElementById('text').value = "";
+	}
 
-function reset() {
-text = "";
-document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
-document.getElementById('noBackspace').innerHTML = "";
-}
+	function highscore () {
+		if (currentScore > highScore) {
+			highScore = currentScore;
+			document.getElementById("highscore").innerHTML = currentScore
+		} else {
+			document.getElementById("highscore").innerHTML = highScore;
+		}
+	}
+
