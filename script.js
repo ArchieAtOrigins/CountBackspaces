@@ -1,8 +1,7 @@
 var counterBs = 0;
 var counterNbs = 0;
 var text = document.getElementById("text");
-var currentScore = counterBs;
-var highScore = 0;
+
 
 document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
 
@@ -18,8 +17,9 @@ text.addEventListener('keyup', (e) => {
 		document.getElementById('noBackspace').innerHTML = "Your streak is " + counterNbs + " characters without hitting the backspace/delete key!";
 	}
 })
-
-	document.addEventListener('click', reset);
+	var reSet = document.getElementById("buttonReset");
+	reSet.addEventListener('click', reset);
+	
 	function reset() {
 		text = "";
 		document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
@@ -27,7 +27,11 @@ text.addEventListener('keyup', (e) => {
 		document.getElementById('text').value = "";
 	}
 
-	function highscore () {
+	function highscore() {
+		var currentScore = counterBs;
+		var highScore = 0;
+		document.getElementById("highscore").innerHTML = highScore;
+
 		if (currentScore > highScore) {
 			highScore = currentScore;
 			document.getElementById("highscore").innerHTML = currentScore
@@ -35,4 +39,5 @@ text.addEventListener('keyup', (e) => {
 			document.getElementById("highscore").innerHTML = highScore;
 		}
 	}
+	highscore();
 
