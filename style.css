@@ -46,3 +46,16 @@ p {
 	font-size: 1em;
 	padding: 15px;
 }
+#highscore {
+	background: white;
+	min-height: 150px;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	background: black;
+	min-height: 50px;
+}
