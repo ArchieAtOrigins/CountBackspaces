@@ -28,6 +28,12 @@ p {
 	font-size: 1.5em;
 	padding: 15px;
 }
+button {
+	border-radius: 3px;
+	margin: 15px;
+	padding: 5px;
+	font-size: 1em;
+}
 #text {
 	background: white;
 	color: black;
@@ -58,4 +64,14 @@ p {
 footer {
 	background: black;
 	min-height: 50px;
+}
+#currentscore {
+	background: grey;
+	min-height: 50px;
+	color: white:;
+}
+#highscore {
+	background: darkgrey;
+	min-height: 75px;
+	color: white:;
 }
