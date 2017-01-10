@@ -48,13 +48,13 @@ button {
 	padding: 15px;
 }
 
-#backspace, #noBackspace {
-	font-size: 1em;
+#backspace, #noBackspace, #currentscore, #highscore {
+	background: grey;
+	border: 1px solid black;
+	margin: 0;
 	padding: 15px;
-}
-#highscore {
-	background: white;
-	min-height: 150px;
+	min-height: 50px;
+	color: white;
 }
 .clearfix::after {
 	content: "";
@@ -65,13 +65,4 @@ footer {
 	background: black;
 	min-height: 50px;
 }
-#currentscore {
-	background: grey;
-	min-height: 50px;
-	color: white:;
-}
-#highscore {
-	background: darkgrey;
-	min-height: 75px;
-	color: white:;
-}
+
