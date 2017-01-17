@@ -28,6 +28,12 @@ p {
 	font-size: 1.5em;
 	padding: 15px;
 }
+button {
+	border-radius: 3px;
+	margin: 15px;
+	padding: 5px;
+	font-size: 1em;
+}
 #text {
 	background: white;
 	color: black;
@@ -42,9 +48,12 @@ p {
 	padding: 15px;
 }
 
-#backspace, #noBackspace {
-	font-size: 1em;
+#backspace, #noBackspace, #currentscore, #highscore {
+	background: grey;
+	border: 1px solid black;
+	margin: 0;
 	padding: 15px;
+<<<<<<< HEAD
 }
 #currentScore {
 	background: grey;
@@ -55,6 +64,10 @@ p {
 	background: white;
 	margin: 0;
 	color: black;
+=======
+	min-height: 50px;
+	color: white;
+>>>>>>> 372fdcca247ffb27fb058b369058b5d5b4ad91e1
 }
 .clearfix::after {
 	content: "";
@@ -65,3 +78,4 @@ footer {
 	background: black;
 	min-height: 50px;
 }
+
