@@ -46,9 +46,15 @@ p {
 	font-size: 1em;
 	padding: 15px;
 }
+#currentScore {
+	background: grey;
+	margin: 0;
+	color: black;
+}
 #highscore {
 	background: white;
-	min-height: 150px;
+	margin: 0;
+	color: black;
 }
 .clearfix::after {
 	content: "";
