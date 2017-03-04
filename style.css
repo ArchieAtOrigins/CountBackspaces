@@ -53,10 +53,27 @@ button {
 	border: 1px solid black;
 	margin: 0;
 	padding: 15px;
+<<<<<<< HEAD
+}
+#currentScore {
+	background: grey;
+	margin: 0;
+	color: black;
+}
+#highscore {
+	background: white;
+	margin: 0;
+	color: black;
+=======
 	min-height: 50px;
+<<<<<<< HEAD
 }
 #highscore {
 	color: black;
+=======
+	color: white;
+>>>>>>> 372fdcca247ffb27fb058b369058b5d5b4ad91e1
+>>>>>>> 9d79ec90cf47e36b853132f6e3808230f830efd1
 }
 .clearfix::after {
 	content: "";
