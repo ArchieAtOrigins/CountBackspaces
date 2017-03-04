@@ -14,7 +14,7 @@ bs.innerHTML = "Click inside the text box and start typing when ready.";
 
 // Add event listener for the keyup on Backspace and to adjust counter value.
 
-document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
+// document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
 
 text.addEventListener('keyup', (e) => {
 	const keyName = e.key;
@@ -26,25 +26,21 @@ text.addEventListener('keyup', (e) => {
 	} else {
 		var currentScore = counterNbs += 1;
 		nbs.innerHTML = "Your streak is " + counterNbs + " characters without hitting the backspace/delete key!";
-		counterNbs += 1;
 		document.getElementById('noBackspace').innerHTML = "Your streak is " + counterNbs + " characters without hitting the backspace/delete key!";
 			highscore();
 	}
 })
-	
 
+// *********** This is the current challenge. Get a highscore. (Doesn't need to be permanently stored at this point. It can disappear once the current session is ended.) Study accessing a var inside a function. Do I have to make it a global variable or do I nest the other function inside to gain access? *********
 
 var highScore = counterNbs;
 document.getElementById('highscore').innerHTML = "Your highscore is " + highScore + "!";;
 	
-// Add listener for Reset button.	
-reSet.addEventListener('click', reset);
-
-// Add reset function to allow user to clear textarea and value and start over.
-
+// Add listener for Reset button.
 var reSet = document.getElementById("buttonReset");
 	reSet.addEventListener('click', reset);
-	
+
+// Add reset function to allow user to clear textarea and value and start over.
 function reset() {
 	bs.innerHTML = "Click inside the text box and start typing when ready."; // this is a repeat. how to make it DRY.
 	counterBs = 0;
