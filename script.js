@@ -1,43 +1,45 @@
 var counterBs = 0;
 var counterNbs = 0;
 var text = document.getElementById("text");
+var bs = document.getElementById('backspace')
+var nbs =document.getElementById('noBackspace')
+var reSet = document.getElementById("buttonReset");
+
+// highscore vars
+// var highScore = counterNbs++;
+// var currentScore = counterNbs;
 
 
-document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
+bs.innerHTML = "Click inside the text box and start typing when ready.";
+
+// Add event listener for the keyup on Backspace and to adjust counter value.
 
 text.addEventListener('keyup', (e) => {
 	const keyName = e.key;
-	if (e.key === 'Backspace') {
+	if (keyName === 'Backspace') {
 		counterBs += 1;
-		document.getElementById('backspace').innerHTML = "You have used the backspace/delete key " + counterBs + " times";
-		document.getElementById('noBackspace').innerHTML = "Whoops! Damn!";
+		bs.innerHTML = "You have used the backspace/delete key " + counterBs + " times";
+		nbs.innerHTML = "Whoops! Damn!";
 		counterNbs = 0;
 	} else {
-		counterNbs += 1;
-		document.getElementById('noBackspace').innerHTML = "Your streak is " + counterNbs + " characters without hitting the backspace/delete key!";
+		var currentScore = counterNbs += 1;
+		nbs.innerHTML = "Your streak is " + counterNbs + " characters without hitting the backspace/delete key!";
 	}
-})
-	var reSet = document.getElementById("buttonReset");
-	reSet.addEventListener('click', reset);
+});
+
+
+// Track highscore. NOT WORKING YET. Think about setting up something like currentscore but that doesn't reset!
+var highScore = counterNbs;
+document.getElementById('highscore').innerHTML = "Your highscore is " + highScore + "!";;
 	
-	function reset() {
-		text = "";
-		document.getElementById('backspace').innerHTML = "Click inside the text box and start typing when ready.";
-		document.getElementById('noBackspace').innerHTML = "";
-		document.getElementById('text').value = "";
-	}
+// Add listener for Reset button.	
+reSet.addEventListener('click', reset);
 
-	function highscore() {
-		var currentScore = counterBs;
-		var highScore = 0;
-		document.getElementById("highscore").innerHTML = highScore;
-
-		if (currentScore > highScore) {
-			highScore = currentScore;
-			document.getElementById("highscore").innerHTML = currentScore
-		} else {
-			document.getElementById("highscore").innerHTML = highScore;
-		}
-	}
-	highscore();
-
+// Add reset function to allow user to clear textarea and value and start over.
+function reset() {
+	bs.innerHTML = "Click inside the text box and start typing when ready."; // this is a repeat. how to make it DRY.
+	counterBs = 0;
+	counterNbs = 0;
+	nbs.innerHTML = "";
+	text.value = "";
+}
